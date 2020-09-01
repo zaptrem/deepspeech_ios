@@ -43,7 +43,7 @@
 		505B136524960D550007DADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		505B136A24960D550007DADA /* deepspeech_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = deepspeech_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		505B137B249619C90007DADA /* deepspeech_ios.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = deepspeech_ios.modulemap; sourceTree = "<group>"; };
-		505B137C24961AF20007DADA /* deepspeech.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = deepspeech.h; path = ../../deepspeech.h; sourceTree = "<group>"; };
+		505B137C24961AF20007DADA /* deepspeech.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = deepspeech.h; path = ../deepspeech.h; sourceTree = "<group>"; };
 		505B137E24961BA70007DADA /* DeepSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepSpeech.swift; sourceTree = "<group>"; };
 		507CD39A24B61FA100409BBB /* libdeepspeech.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libdeepspeech.so; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,7 +165,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = Mozilla;
 				TargetAttributes = {
 					505B136024960D550007DADA = {
@@ -342,6 +342,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -363,8 +364,9 @@
 		505B137624960D550007DADA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -397,8 +399,9 @@
 		505B137724960D550007DADA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
